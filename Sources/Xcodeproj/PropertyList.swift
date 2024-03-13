@@ -10,7 +10,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-#if swift(>=5.9)
+#if swift(>=5.8)
 
 /// A enum representing data types for legacy PropertyList type.
 /// Note that the `identifier` enum is not strictly necessary,

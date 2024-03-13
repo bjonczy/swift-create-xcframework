@@ -10,7 +10,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-#if swift(>=5.9)
+#if swift(>=5.8)
 
 /*
  In an effort to provide:
@@ -47,7 +47,7 @@ extension ResolvedTarget {
             return "com.apple.product-type.framework"
         case .executable, .snippet:
             return "com.apple.product-type.tool"
-        case .systemModule, .binary, .plugin, .macro:
+        case .systemModule, .binary, .plugin:
             fatalError()
         }
     }
@@ -60,7 +60,7 @@ extension ResolvedTarget {
             return "wrapper.framework"
         case .executable, .snippet:
             return "compiled.mach-o.executable"
-        case .systemModule, .binary, .plugin, .macro:
+        case .systemModule, .binary, .plugin:
             fatalError()
         }
     }
@@ -73,7 +73,7 @@ extension ResolvedTarget {
             return RelativePath("\(c99name).framework")
         case .executable, .snippet:
             return RelativePath(name)
-        case .systemModule, .binary, .plugin, .macro:
+        case .systemModule, .binary, .plugin:
             fatalError()
         }
     }
@@ -85,7 +85,7 @@ extension ResolvedTarget {
             return "'lib$(TARGET_NAME)'"
         case .test, .executable, .snippet:
             return "'$(TARGET_NAME)'"
-        case .systemModule, .binary, .plugin, .macro:
+        case .systemModule, .binary, .plugin:
             fatalError()
         }
     }

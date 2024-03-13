@@ -10,7 +10,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-#if swift(>=5.9)
+#if swift(>=5.8)
 
 import TSCBasic
 import PackageGraph
@@ -83,7 +83,7 @@ public final class SchemesGenerator {
         // Finally, create one master scheme for the entire package.
         let regularTargets = rootPackage.targets.filter({
             switch $0.type {
-            case .test, .systemModule, .binary, .plugin, .macro:
+            case .test, .systemModule, .binary, .plugin:
                 return false
             case .executable, .snippet, .library:
                 return true

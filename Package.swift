@@ -7,11 +7,11 @@ let dependencies: [Package.Dependency]
 let versionedTargets: [Target]
 let versionedDependencies: [Target.Dependency]
 
-#if swift(>=5.9)
+#if swift(>=5.8)
 dependencies = [
-    .package(url: "https://github.com/apple/swift-argument-parser.git", .exact("1.2.3")),
-    .package(name: "SwiftPM", url: "https://github.com/apple/swift-package-manager.git", .branch("release/5.9")),
-    .package(url: "https://github.com/apple/swift-tools-support-core.git", .branch("release/5.9")),
+    .package(url: "https://github.com/apple/swift-argument-parser.git", .exact("1.0.3")),
+    .package(name: "SwiftPM", url: "https://github.com/apple/swift-package-manager.git", .branch("release/5.8")),
+    .package(url: "https://github.com/apple/swift-tools-support-core.git", .branch("release/5.8")),
 ]
 versionedTargets = [
     .target(

@@ -10,7 +10,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-#if swift(>=5.9)
+#if swift(>=5.8)
 
 /*
  A very simple rendition of the Xcode project model.  There is only sufficient

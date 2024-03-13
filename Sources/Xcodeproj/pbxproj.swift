@@ -10,7 +10,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-#if swift(>=5.9)
+#if swift(>=5.8)
 
 import Basics
 import Foundation
@@ -397,7 +397,7 @@ public func xcodeProject(
             productType = .framework
         case .test:
             productType = .unitTest
-        case .systemModule, .binary, .plugin, .macro:
+        case .systemModule, .binary, .plugin:
             throw InternalError("\(target.type) not supported")
         }
 
